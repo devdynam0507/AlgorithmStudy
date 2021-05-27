@@ -7,13 +7,6 @@ import java.util.StringTokenizer;
 
 public class A2745 {
 
-    public static int pow(int ni, int cnt) {
-        int result = 1;
-        for(int i = 1; i <= cnt; i++) { result *= ni; }
-
-        return result;
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
