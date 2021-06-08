@@ -33,7 +33,7 @@ public class A2141 {
 
         total += 1;
         total /= 2;
-        
+
         long answer = 0;
         for(int i = 0; i < T; i++) {
             long[] l = list.get(i);
