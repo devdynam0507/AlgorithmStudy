@@ -3,9 +3,9 @@
 
 - DataStructure ✅
 - Greedy ✅
-- Two-Pointer ✔️
+- Two-Pointer ✅
 - Implementation ❌
-- Graph Traversal ❌
+- Graph Traversal ✔️
 - Brute Force ❌
 - Binary Search ❌
 - BackTracking ❌
