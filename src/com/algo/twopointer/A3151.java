@@ -18,7 +18,7 @@ public class A3151 {
         }
         Arrays.sort(arr);
 
-        int cnt = 0;
+        long cnt = 0;
         for(int i = 0; i < N - 2; i++) {
             int left = i + 1, right = N - 1;
             int choice = arr[i];
@@ -28,16 +28,11 @@ public class A3151 {
             }
 
             while(left < right) {
-                int s = choice + arr[left] + arr[right];
+                long s = choice + arr[left] + arr[right];
 
                 if(s == 0) {
                     if(arr[left] == arr[right]) {
-                        if((right - left) % 2 == 0) {
-                            cnt += right - left + 1;
-                            break;
-                        }
-                        cnt += right - left;
-                        System.out.printf("%d %d %d\n", left, right, right - left);
+                        cnt += (right - left + 1) * (long) (right - left) / 2;
                         break;
                     }
                     else {
@@ -54,8 +49,7 @@ public class A3151 {
                             ++l;
                         }
 
-                        cnt += l * r;
-                        System.out.printf("[%d %d,%d,%d] %d x %d = %d\n", i, choice, lv, rv, l, r, l * r);
+                        cnt += l * (long) r;
                     }
                 }
                 else if(s > 0) {
