@@ -25,7 +25,9 @@ public class P모의고사 {
         PriorityQueue<int[]> integers = new PriorityQueue<>(new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
+
                 return o2[1] - o1[1];
+
             }
         });
 
@@ -48,6 +50,7 @@ public class P모의고사 {
         int[] arr = new int[list.size()];
         for(int i = 0; i < arr.length; i++) {
             arr[i] = list.get(i);
+            System.out.printf("%d ", arr[i]);
         }
 
         return arr;

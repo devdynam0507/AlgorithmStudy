@@ -42,7 +42,12 @@ public class P카펫 {
 
         dfs(1);
 
-        return list.get(0);
+        list.forEach(i -> {
+            System.out.printf("%d x %d = %d\n", i[0], i[1], i[0] * i[1]);
+        });
+        list.clear();
+
+        return null;
     }
 
     public static void main(String[] args) {
