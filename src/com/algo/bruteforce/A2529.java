@@ -9,10 +9,6 @@ import java.util.StringTokenizer;
 
 public class A2529 {
 
-    final static int[] arr = {
-            0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    };
-
     static boolean[] visit = new boolean[10];
 
     static List<String> result = new ArrayList<>();
