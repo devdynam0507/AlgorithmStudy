@@ -100,20 +100,45 @@ public class Main {
         return result;
     }
 
+    static class Hello {
+
+        public void call() {
+            print();
+        }
+
+        public void print() {
+            print();
+            System.out.println("hello");
+        }
+
+    }
+
+    static class World extends Hello {
+        public void call() {
+            super.print();
+        }
+
+        public void print() {
+            System.out.println("world");
+        }
+    }
+
     public static void main(String[] args) {
-        LinkedList<String> a = new LinkedList<>();
-        LinkedList<String> b = new LinkedList<>();
-
-        for(int i = 0; i < 100000; i++) {
-            a.add(i + 1 + "");
-        }
-        for(int i = 0; i < 100001; i++) {
-            b.add(i + 1 + "");
-        }
-        Collections.sort(a);
-        Collections.sort(b);
-
-        syncArray(a, b);
+        Hello obj = new World();
+        obj.call();
+//        LinkedList<String> a = new LinkedList<>();
+//        LinkedList<String> b = new LinkedList<>();
+//
+//        for(int i = 0; i < 100000; i++) {
+//            a.add(i + 1 + "");
+//        }
+//        for(int i = 0; i < 100001; i++) {
+//            b.add(i + 1 + "");
+//        }
+//        Collections.sort(a);
+//        Collections.sort(b);
+//
+//        syncArray(a, b);
     }
 }
 
