@@ -48,7 +48,7 @@ public class A2636 {
         for(int y = 0; y < N; y++) {
             for(int x = 0; x < M; x++) {
                 if(visited[y][x]) {
-                    visited[y][x] = true;
+                    visited[y][x] = false;
                  }
                 if(check[y][x]) {
                     map[y][x] = 0;
@@ -81,8 +81,6 @@ public class A2636 {
         while(++k > 0) {
             dfs(0, 0);
             int c = handle();
-            visited = new boolean[N][M];
-            check = new boolean[N][M];
 
             if(c == 0) {
                 --k;
