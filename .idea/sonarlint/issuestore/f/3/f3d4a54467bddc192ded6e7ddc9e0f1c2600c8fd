@@ -1,9 +1,0 @@
-
-J
-java:S1854"5Remove this useless assignment to local variable "n".(”Ó&
-‡
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¦œ¡úÿÿÿÿ
-;
-java:S1481"&Remove this unused "n" local variable.(”Ó&
-N	java:S1060"9Replace this use of System.out or System.err by a logger.(õĞĞÌ
-S	java:S106G"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ
