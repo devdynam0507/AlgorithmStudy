@@ -8,21 +8,16 @@ public class A1475 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        char[] chars = reader.readLine().toCharArray();
+        char[] chars = reader.readLine().replace("9", "6").toCharArray();
         int[] set = new int[10];
 
         for(char ch : chars) {
             set[ch - '0']++;
         }
-        int avg;
-        if((set[6] + set[9]) % 2 == 0) {
-            avg = (set[6] + set[9]) / 2;
-        }
-        else {
-            avg = (set[6] + set[9]) / 2 + 1;
-        }
-        set[9] = avg;
-        int max = Integer.MIN_VALUE;
+
+        set[6] = Math.round(set[6] / 2.0f);
+
+        int max = 0;
         for(int i = 0; i <= 9; i++) {
             if(max < set[i]) {
                 max = set[i];
